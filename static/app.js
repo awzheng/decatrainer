@@ -1,5 +1,5 @@
 /**
- * deca - DECA Flashcard Bank
+ * decatrainer - DECA Flashcard Bank
  * Frontend application
  */
 
@@ -26,7 +26,7 @@ const themeToggle = document.getElementById('theme-toggle');
 // =========================
 
 function initTheme() {
-    const savedTheme = localStorage.getItem('deca-theme') || 'light';
+    const savedTheme = localStorage.getItem('decatrainer-theme') || 'light';
     document.documentElement.setAttribute('data-theme', savedTheme);
 }
 
@@ -34,7 +34,7 @@ function toggleTheme() {
     const current = document.documentElement.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('deca-theme', next);
+    localStorage.setItem('decatrainer-theme', next);
 }
 
 // =========================

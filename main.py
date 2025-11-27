@@ -1,5 +1,5 @@
 """
-deca - DECA Flashcard Bank
+decatrainer - DECA Flashcard Bank
 """
 
 from pathlib import Path
@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = FastAPI(title="deca", description="DECA Flashcard Bank")
+app = FastAPI(title="decatrainer", description="DECA Flashcard Bank")
 
 # Mount static files
 app.mount("/static", StaticFiles(directory="static"), name="static")

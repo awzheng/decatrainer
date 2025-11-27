@@ -1,5 +1,5 @@
 """
-Vercel Serverless Function Entry Point for deca
+Vercel Serverless Function Entry Point for decatrainer
 """
 
 from fastapi import FastAPI, HTTPException
@@ -56,7 +56,7 @@ async def root():
     index_path = TEMPLATES_DIR / "index.html"
     if index_path.exists():
         return HTMLResponse(content=index_path.read_text(encoding='utf-8'))
-    return HTMLResponse("<h1>deca</h1><p>Template not found</p>")
+    return HTMLResponse("<h1>decatrainer</h1><p>Template not found</p>")
 
 
 @app.get("/static/{path:path}")
