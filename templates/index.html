@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>deca · Flashcard Bank</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    
+    <!-- Markdown-it -->
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@14.0.0/dist/markdown-it.min.js"></script>
+    
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1 class="logo">
+                    <span class="logo-icon">📊</span>
+                    <span class="logo-text">deca</span>
+                </h1>
+                <p class="tagline">Flashcard Bank</p>
+            </header>
+            
+            <nav class="nav-tree" id="nav-tree">
+                <div class="nav-loading">Loading content...</div>
+            </nav>
+            
+            <footer class="sidebar-footer">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
+                    <span class="theme-icon light-icon">☀️</span>
+                    <span class="theme-icon dark-icon">🌙</span>
+                </button>
+            </footer>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="content">
+            <div class="content-wrapper" id="content-wrapper">
+                <!-- Welcome Screen -->
+                <div class="welcome" id="welcome">
+                    <div class="welcome-inner">
+                        <div class="welcome-icon">🏆</div>
+                        <h2>Welcome to deca</h2>
+                        <p>Your DECA case competition flashcard bank.</p>
+                        <div class="welcome-hint">
+                            Select a topic from the sidebar to start studying.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Article Content -->
+                <article class="article" id="article" hidden>
+                    <div class="article-header">
+                        <nav class="breadcrumb" id="breadcrumb"></nav>
+                    </div>
+                    <div class="article-body" id="article-body"></div>
+                </article>
+            </div>
+        </main>
+    </div>
+    
+    <script src="/static/app.js"></script>
+</body>
+</html>
+
